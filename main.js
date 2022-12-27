@@ -13,7 +13,12 @@ module.exports = {
         // Your code goes here
         if (arguments.length === 0) return 0
         
-        return arr; // or something else who knows ?
+        
+        arr.filter(element => !isNaN(element))
+        const total = module.exports.arraySum(arr)
+        
+        return total / arr.length; // or something else who knows ?
+
     },
     
     arrayMax: function(arr) {
